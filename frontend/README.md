@@ -1,121 +1,70 @@
-# DevSoc 2024 Subcommittee Recruitment Frontend Technical
+# Getting Started with Create React App
 
-## Overview and Expectations
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- You will be given an image of a website. **Your goal is to recreate this image as a page**.
-- You can (and we would prefer) that you implement your solution in this directory, though you may choose to create your own repository
-- This is a qualitative technical assessment that will be reviewed by Project Directors to make a judgment on progressing your application to an interview.
-- There are no exact marks associated with the completion of individual components. Your code will be judged on its structure, style and adherence to frontend conventions to create a visually similar product to the specified goal.
-- This technical task is **not compulsory**. You may judge the relevance of this task to the project and role you are applying for.
-  - We will be making a judgement based on your holistic application which includes your application answers and may include either or both this and the backend task.
+## Available Scripts
 
-## Tasks
+In the project directory, you can run:
 
-![Unilectives](./Unilectives.png)
+### `npm start`
 
-An image of the [Unilectives](https://unilectives.devsoc.app/) site is provided above.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Main Task
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-The goal of this part is for you to demonstrate your HTML, CSS and JS/TS skills. Please recreate this image in a frontend environment.
+### `npm test`
 
-You are given the freedom to choose how you recreate this.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- You may decide to use a single `.html` file.
-- You can also use any frontend framework or library as the foundation of your page.
-  - These include but are not limited to `React`, `Angular`, `Vue` as well as `Next.js` or `Gatsby.js`.
-- The search bar and sort by dropdown do not need to work.
-- Obviously matching every stylistic aspect of this page may be difficult and time-consuming. Prioritise large elements and structural features before you try to partially fill a rating start for example.
-- You do not need to find exact matches for the fonts, icons or logos.
-- You do not need to aim for perfection. Please only complete as much of this exercise as you wish focusing on demonstrating the breadth of your frontend knowledge. There is no requirement for perfection or pixel-precise matching.
-- You do not need to account for responsive design.
+### `npm run build`
 
-The sample data shown in the image is provided both in the `courses.json` file and below in the [Appendix](#appendix) in `JSON` format.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The [Unilectives](./assets/unilectives.svg) icon has been provided as an `svg`. The rest of the assets are taken from a library which has been provided below for your convenience.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- Navbar: [Heroicons](https://heroicons.com/), from top to bottom:
-  - [Unilectives](./assets/unilectives.svg)
-  - book-open
-  - shield-check
-  - bars-arrow-down/bars-arrow-up
-  - user-circle
-  - moon
-  - arrow-right-end-on-rectangle
-- Course cards:
-  - star: `★` (plain text)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Partially coloured stars are not a requirement for this task but you are welcome make an attempt.
+### `npm run eject`
 
-### Stretch Task 1
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-The goal of this part is for you to demonstrate component state management. Please make the colour of the title "Unilectives" change when clicked.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Stretch Task 2
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-The goal of this part is for you to demonstrate interaction with your site. Please make the search bar clickable. Upon being clicked, a `div` should appear. The `div` should be any simple, blank white box with a black outline, vertically and horizontally centred on top of the content of the page. The `div` should contain in it, another button to dismiss the `div`.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Submission
+## Learn More
 
-Please submit the link to your fork of the repo in the application form. You may choose to implement your solution in a separate, fresh repository. If so, please share the link to this repository within `instructions.txt`.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-If your solution is not accessible through an `index.html` file or run via a standard `npm i` `npm run start` command, please fill out `instructions.txt` with instructions on how we can open your solution in our browser and any dependencies that we may need.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Additional comment
+### Code Splitting
 
-Whilst most of our frontend applicants tend to have frontend experience, either through self-study, work or COMP6080, we are open to candidates of varying experiences and abilities. The most important characteristics are one's curiosity and willingness to self-teach/learn. We have had frontend members join with little prior experience and go on to learn and contribute significantly. Therefore, if you find a lot of these exercises difficult, do not be disheartened - please make an attempt.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Appendix
+### Analyzing the Bundle Size
 
-```json
-[
-  {
-    "course_prefix": "COMP",
-    "course_code": 1511,
-    "course_title": "Programming Fundamentals",
-    "average_stars": 4.8,
-    "total_reviews": 68,
-    "offered_terms": ["Term 1", "Term 2", "Term 3"]
-  },
-  {
-    "course_prefix": "COMP",
-    "course_code": 1531,
-    "course_title": "Software Engineering Fundamentals",
-    "average_stars": 3.9,
-    "total_reviews": 47,
-    "offered_terms": ["Term 1", "Term 2", "Term 3"]
-  },
-  {
-    "course_prefix": "COMP",
-    "course_code": 1521,
-    "course_title": "Computer Systems Fundamentals",
-    "average_stars": 4,
-    "total_reviews": 40,
-    "offered_terms": ["Term 1", "Term 2", "Term 3"]
-  },
-  {
-    "course_prefix": "COMP",
-    "course_code": 2521,
-    "course_title": "Data Structures and Algorithms",
-    "average_stars": 4,
-    "total_reviews": 36,
-    "offered_terms": ["Summer", "Term 1", "Term 2", "Term 3"]
-  },
-  {
-    "course_prefix": "COMP",
-    "course_code": 2511,
-    "course_title": "Object-Oriented Design & Programming",
-    "average_stars": 3,
-    "total_reviews": 33,
-    "offered_terms": ["Term 1", "Term 2", "Term 3"]
-  },
-  {
-    "course_prefix": "COMP",
-    "course_code": 3311,
-    "course_title": "Database Systems",
-    "average_stars": 4,
-    "total_reviews": 33,
-    "offered_terms": ["Term 1", "Term 3"]
-  }
-]
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
