@@ -3,23 +3,86 @@
  * Task 1
  */
 function leafFiles(files) {
-    return [];
+    let allLeaf = [];
+    for (let i = 0; i < files.length; i++) {
+        let isLeaf = true;
+        for (let j = 0; j < files.length; j++) {
+            if (files[j].parent === files[i].id) {
+                isLeaf = false;
+                break;
+            }
+        }
+        if (isLeaf) {
+            allLeaf.push(files[i].name);
+        }
+    }
+    
+    return allLeaf;
 }
 
 /**
  * Task 1
  */
 function kLargestCategories(files, k) {
-    return [];
+    let allCatFile = files.flatMap((file) => file.categories).sort()
+    // Count occurrences of each category
+    let categoryCounts = allCatFile.reduce((counts, category) => {
+        counts[category] = (counts[category] || 0) + 1;
+        return counts;
+    }, {});
+    let allCatFileSorted = Object.keys(categoryCounts).sort((a, b) => categoryCounts[b] - categoryCounts[a]);
+    // console.log(allCatFileSorted.splice(0,k));
+    return allCatFileSorted.splice(0,k);
 }
 
 /**
  * Task 1
  */
+
 function largestFileSize(files) {
-    return 0;
+    // Create a map to store folder sizes
+    const folderSizes = new Map();
+
+    // Iterate through each file object
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        // If the file is a folder
+        if (file.categories.includes("Folder")) {
+            // Call a recursive function to calculate the folder size
+            const folderSize = calculateFolderSize(files, file.id);
+            // Update folderSizes map with the folder ID and its size
+            folderSizes.set(file.id, folderSize);
+        }
+    }
+
+    // Find the largest folder size
+    let largestSize = 0;
+    for (const size of folderSizes.values()) {
+        if (size > largestSize) {
+            largestSize = size;
+        }
+    }
+
+    return largestSize;
 }
 
+// Recursive function to calculate the size of a folder and its subfolders
+function calculateFolderSize(files, folderId) {
+    let folderSize = 0;
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        if (file.parent === folderId) {
+            if (file.categories.includes("Folder")) {
+                // If the file is a subfolder, recursively calculate its size
+                folderSize += calculateFolderSize(files, file.id);
+            } else {
+                // If the file is not a folder, add its size to the folder size
+                folderSize += file.size;
+            }
+        }
+    }
+    return folderSize;
+}
 
 function arraysEqual(a, b) {
     if (a === b) return true;
@@ -46,7 +109,7 @@ const testFiles = [
     { id: 144, name: "Spreadsheet2.xlsx", categories: ["Documents", "Excel"], parent: 3, size: 2048 },
     { id: 233, name: "Folder3", categories: ["Folder"], parent: -1, size: 4096 },
 ];
-
+console.log(largestFileSize(testFiles));
 console.assert(arraysEqual(
     leafFiles(testFiles).sort((a, b) => a.localeCompare(b)),
     [
