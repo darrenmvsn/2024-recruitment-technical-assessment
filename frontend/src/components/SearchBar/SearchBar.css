@@ -18,3 +18,7 @@
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
 
 }
+.border-unilectives-subheadings {
+    --tw-border-opacity: 1;
+    border-color: rgb(152 152 152/var(--tw-border-opacity));
+}

@@ -3,7 +3,7 @@ import "./Card.css"
 const Card = (props) => {
     console.log(props);
   return (
-    <div className=" grid grid-rows-1 grid-cols-1 gap-12 mt-10 w-3/10 items-center">
+    <div className=" grid grid-rows-1 grid-cols-1 gap-12 w-3/10 items-center">
       <a href="/">
           <div className="box-border px-9 py-7 bg-unilectives-card hover:bg-gray-100 shadow-lg rounded-xl space-y-2 cursor-pointer">
           <div class="flex flex-wrap justify-between text-2xl gap-x-4">

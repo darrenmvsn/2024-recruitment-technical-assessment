@@ -12,7 +12,7 @@ function App() {
     <div >
       <Navbar setClickLogo={setClickLogo} clickLogo={clickLogo} />
       
-      <div className='flex flex-col justify-center '>
+      <div className='flex flex-col justify-center w-9/10'>
         <Header clickLogo={clickLogo}  />
         <SearchBar modalOpen={modalOpen} setmodalOpen={setmodalOpen} />
         <Courses />
