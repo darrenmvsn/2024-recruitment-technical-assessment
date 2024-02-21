@@ -11,8 +11,17 @@ const Card = (props) => {
               <div class="text-left">
                   <div class="text-2xl inline">
                       <div class="relative text-unilectives-subheadings/30 inline-block">
-                          <span aria-label="rating">★★★★★</span>
-                          <span class="bg-unilectives-purple absolute inset-0 text-transparent bg-clip-text select-none" style={{width:"96.8%"}} aria-hidden="true">★★★★★</span>
+                          <span aria-label="rating ">★★★★★</span>
+                          <span class="bg-unilectives-purple absolute inset-0 text-transparent bg-clip-text select-none" style={{width:"96.8%"}} aria-hidden="true">
+                            {Array.from({ length: Math.round(props.courses.average_stars) }, (_, index) => (
+                              <span key={index}>★</span>
+                            ))}
+                          </span>
+                          <span class=" absolute inset-0 text-transparent bg-clip-text select-none" style={{width:"96.8%"}} aria-hidden="true">
+                            {Array.from({ length: Math.round(5 - props.courses.average_stars) }, (_, index) => (
+                              <span key={index}>★</span>
+                            ))}
+                          </span>
                       </div>
                   </div>
                   <p class="text-xs text-unilectives-subheadings">{props.courses.total_reviews} reviews</p>

@@ -9,7 +9,7 @@ function App() {
   const [clickLogo, setClickLogo] = useState(false);
   const [modalOpen, setmodalOpen] = useState(false)
   return (
-    <div >
+    <div className="overflow-x-hidden" >
       <Navbar setClickLogo={setClickLogo} clickLogo={clickLogo} />
       
       <div className='flex flex-col justify-center w-9/10'>

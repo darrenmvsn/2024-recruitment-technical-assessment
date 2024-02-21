@@ -28,3 +28,8 @@
     --tw-bg-opacity: 1;
     /* background-color: rgb(183 137 229/var(--tw-bg-opacity)); */
 }
+
+.bg-unilectives-purple {
+    --tw-bg-opacity: 1;
+    background-color: rgb(183 137 229/var(--tw-bg-opacity));
+}
